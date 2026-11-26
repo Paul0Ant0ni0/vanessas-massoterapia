@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanessa's Massoterapia · Massoterapia, Bem-estar e Relaxamento · Campinas</title>
+<meta name="description" content="Massagem relaxante, terapêutica, desportiva, drenagem linfática, reflexologia podal, ventosaterapia e mais. Atendimento no Clube AABB, Campinas. Peça seu orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#6c4f82">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PALETA (extraída da arte da Vanessa: lilás, ameixa, folhagem)
+   Contrastes calculados (WCAG): ameixa/creme ≥ 8:1, branco/roxo ≥ 6:1
+   ============================================================ */
+:root{
+  --plum:#4b3660;        /* títulos – contraste 9:1 sobre creme */
+  --purple:#6c4f82;      /* botões, destaques – branco sobre ele 6.7:1 */
+  --mauve:#9a7bb0;       /* detalhes decorativos */
+  --lilac:#ece3f2;       /* fundos suaves */
+  --blush:#f8f3f6;       /* fundo base */
+  --sage:#6f8a63;        /* folhagem / acento secundário */
+  --gold:#a8812f;        /* micro-acento (só em detalhes) */
+  --ink:#2f2639;         /* texto – 13:1 */
+  --muted:#5b5066;       /* texto secundário – 7:1 */
+  --line:#e3d7ec;
+  --white:#fff;
+  --r:20px;              /* raio único = consistência */
+  --s:8px;               /* escala de espaçamento base */
+  --shadow:0 10px 30px rgba(75,54,96,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--blush);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.1;color:var(--plum)}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--plum);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--purple);outline-offset:3px;border-radius:6px}
+.ic{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:30;background:rgba(248,243,246,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:1.6rem;color:var(--plum);text-decoration:none;white-space:nowrap}
+.menu{display:none;gap:26px;list-style:none}
+.menu a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--muted);padding:8px 2px;border-bottom:2px solid transparent}
+.menu a:hover{color:var(--plum);border-color:var(--mauve)}
+@media(min-width:900px){.menu{display:flex}}
+
+/* ---------- Botões (hierarquia: primário sólido, secundário contorno) ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--purple);color:#fff;box-shadow:0 8px 20px rgba(108,79,130,.28)}
+.btn.primary:hover{background:var(--plum)}
+.btn.ghost{background:transparent;color:var(--plum);border-color:var(--purple)}
+.btn.ghost:hover{background:var(--lilac)}
+.btn.light{background:#fff;color:var(--plum)}
+.btn .ic{width:20px;height:20px}
+.btn.sm{min-height:42px;padding:0 16px;font-size:.88rem;white-space:nowrap}
+@media(max-width:420px){.logo{font-size:1.3rem}.btn.sm{padding:0 12px;font-size:.82rem}}
+
+/* ---------- Seções (espaço em branco generoso = respiro) ---------- */
+section{padding:88px 0;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.2em;text-transform:uppercase;font-size:.74rem;font-weight:600;color:var(--sage);margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--sage);border-radius:2px}
+h2{font-size:clamp(2rem,5.2vw,3rem);margin-bottom:14px}
+.sub{color:var(--muted);max-width:38em;font-size:1.04rem}
+.head{margin-bottom:44px}
+.center{text-align:center}.center .sub{margin-inline:auto}.center .eyebrow{justify-content:center}
+.alt{background:rgba(236,227,242,.72)}
+
+/* ---------- Hero ---------- */
+.hero{padding:64px 0 80px;overflow:hidden;background:radial-gradient(1000px 500px at 85% 0%,rgba(236,227,242,.9),transparent 70%)}
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.hero h1{font-size:clamp(2.7rem,7.4vw,4.6rem);margin:6px 0 20px;letter-spacing:-.01em}
+.hero h1 em{color:var(--purple);font-style:italic}
+.lead{font-size:1.16rem;color:var(--muted);max-width:30em;margin-bottom:30px}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.chips{display:flex;flex-wrap:wrap;gap:10px 22px;list-style:none;color:var(--muted);font-size:.92rem}
+.chips li{display:flex;align-items:center;gap:8px}
+.chips .ic{width:20px;height:20px;color:var(--sage)}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:440px;width:100%;margin-inline:auto}
+.orb{position:absolute;inset:6%;border-radius:50%;background:linear-gradient(145deg,#ddd0e8,#f4eef8);box-shadow:var(--shadow)}
+.orb2{position:absolute;inset:18%;border-radius:50%;border:1.5px dashed var(--mauve);opacity:.6}
+.hero-art .flower{position:absolute;inset:0;margin:auto;width:46%;color:var(--purple)}
+.leaf-a,.leaf-b{position:absolute;color:var(--sage);opacity:.85}
+.leaf-a{width:34%;top:-2%;left:-4%;transform:rotate(-20deg)}
+.leaf-b{width:40%;bottom:-3%;right:-6%;transform:rotate(150deg)}
+.float-card{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-size:.84rem;display:flex;align-items:center;gap:10px;color:var(--plum);font-weight:600}
+.float-card .ic{width:22px;height:22px;color:var(--purple)}
+.fc1{left:-2%;top:22%}.fc2{right:-2%;bottom:20%}
+
+/* ---------- Serviços ---------- */
+.grid4{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(235px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--mauve)}
+.icon-bubble{width:54px;height:54px;border-radius:16px;background:var(--lilac);color:var(--purple);display:grid;place-items:center;margin-bottom:18px}
+.icon-bubble .ic{width:28px;height:28px}
+.card h3{font-size:1.55rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+
+/* ---------- Sobre ---------- */
+.about-grid{display:grid;gap:44px}
+@media(min-width:900px){.about-grid{grid-template-columns:1fr 1fr;align-items:center}}
+.photo{position:relative;aspect-ratio:4/5;max-width:420px;width:100%;border-radius:200px 200px var(--r) var(--r);background:linear-gradient(160deg,#d8c9e6,#f1eaf6);display:grid;place-items:center;text-align:center;color:var(--purple);padding:30px;font-size:.9rem;border:1.5px dashed var(--mauve)}
+.photo .ic{width:44px;height:44px;margin:0 auto 10px}
+.story p{color:var(--muted);margin-bottom:14px}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.55rem;line-height:1.3;color:var(--plum);border-left:3px solid var(--sage);padding-left:20px;margin:22px 0}
+.mvv{display:grid;gap:18px;margin-top:56px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.mvv .card{background:var(--blush)}
+.values{list-style:none;display:grid;gap:8px;margin-top:8px}
+.values li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.95rem}
+.values .ic{width:20px;height:20px;color:var(--sage);flex:none;margin-top:3px}
+.draft{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#fff6dd;color:#6b5210;border:1px dashed var(--gold);padding:3px 10px;border-radius:999px;margin-bottom:14px}
+
+/* ---------- Diferenciais ---------- */
+.diff{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.diff article{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.diff h3{font-size:1.4rem;margin-bottom:6px}
+.diff p{color:var(--muted);font-size:.95rem}
+
+/* ---------- Como funciona ---------- */
+.steps{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));counter-reset:s}
+.step{position:relative;text-align:center;padding:10px 12px}
+.step .num{width:60px;height:60px;border-radius:50%;background:var(--purple);color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.9rem;display:grid;place-items:center;margin:0 auto 16px;box-shadow:0 8px 20px rgba(108,79,130,.28)}
+.step h3{font-size:1.4rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* ---------- Avaliações ---------- */
+.reviews{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;position:relative}
+.review .stars{display:flex;gap:3px;color:var(--gold);margin-bottom:14px}
+.review .stars .ic{width:18px;height:18px;fill:currentColor;stroke:none}
+.review blockquote{color:var(--ink);font-size:1rem;margin-bottom:18px}
+.review .who{display:flex;gap:12px;align-items:center}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--lilac);color:var(--purple);display:grid;place-items:center;font-weight:600}
+.review .who small{display:block;color:var(--muted)}
+.review.placeholder{border-style:dashed;border-color:var(--gold);background:#fffdf6}
+.qmark{position:absolute;right:22px;top:14px;font-family:'Cormorant Garamond',serif;font-size:4.6rem;color:var(--lilac);line-height:1}
+
+/* ---------- Vale presente ---------- */
+.gift{background:linear-gradient(135deg,var(--plum),#33224a);border-radius:28px;padding:56px 28px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.gift h2{color:#f4e2b3}
+.gift p{color:#e9e0f1;max-width:34em;margin:6px auto 26px}
+.gift .flower{position:absolute;width:220px;color:#fff;opacity:.07;right:-40px;bottom:-50px}
+.gift .gift-ic{width:48px;height:48px;color:#f4e2b3;margin:0 auto 14px}
+
+/* ---------- Orçamento ---------- */
+.quote-grid{display:grid;gap:36px}
+@media(min-width:900px){.quote-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.checks{list-style:none;display:grid;gap:12px;margin-top:22px}
+.checks li{display:flex;gap:12px;align-items:flex-start;color:var(--muted)}
+.checks .ic{width:22px;height:22px;color:var(--sage);flex:none;margin-top:2px}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:var(--shadow);display:grid;gap:18px}
+label{display:grid;gap:6px;font-weight:600;font-size:.9rem;color:var(--plum)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--blush);border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;min-height:48px;width:100%}
+textarea{min-height:104px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 4px rgba(108,79,130,.15)}
+.row2{display:grid;gap:18px}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.note{font-size:.82rem;color:var(--muted);font-weight:400}
+
+/* ---------- Contato ---------- */
+.info{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.info .card{display:flex;gap:16px;align-items:flex-start;padding:24px}
+.info .icon-bubble{margin:0;flex:none}
+.info h3{font-size:1.3rem;margin-bottom:4px}
+.info p,.info a{color:var(--muted);font-size:.95rem}
+.info a:hover{color:var(--plum)}
+.map-btn{margin-top:30px}
+
+footer{position:relative;z-index:1;background:var(--plum);color:#e9e0f1;padding:44px 0 100px;text-align:center}
+footer .logo{color:#fff;display:inline-block;margin-bottom:8px}
+footer p{font-size:.88rem;opacity:.9}
+footer a{color:#fff}
+
+.float{position:fixed;right:16px;bottom:16px;z-index:40;min-height:54px;padding:0 22px;border-radius:999px;background:var(--purple);color:#fff;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:10px;box-shadow:0 10px 26px rgba(75,54,96,.38)}
+.float .ic{width:22px;height:22px}
+
+/* ---------- Forma que se transforma ao rolar (SVG morph) ---------- */
+#morph{position:fixed;z-index:0;pointer-events:none;width:min(78vw,640px);aspect-ratio:1;right:-14vw;top:50%;margin-top:calc(min(78vw,640px) / -2);opacity:.55;will-change:transform}
+@media(min-width:900px){#morph{right:-6vw;opacity:.7}}
+#morph path{transition:none}
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--mauve),var(--sage));transform-origin:0 50%;transform:scaleX(0);z-index:60}
+
+/* ---------- Empresas e eventos ---------- */
+.biz{display:grid;gap:40px}
+@media(min-width:900px){.biz{grid-template-columns:1fr 1fr;align-items:start}}
+.facts{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:26px 0}
+.fact{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;text-align:center}
+.fact .ic{margin:0 auto 8px;color:var(--purple)}
+.fact strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--plum);line-height:1.1}
+.fact span{font-size:.85rem;color:var(--muted)}
+.formats{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.formats{grid-template-columns:1fr}}
+.formats .card{padding:22px 20px}
+.formats h3{font-size:1.3rem}
+.timeline{list-style:none;margin-top:30px;display:grid;gap:0;border-left:2px dashed var(--mauve);margin-left:18px}
+.timeline li{position:relative;padding:0 0 22px 28px}
+.timeline li::before{content:attr(data-n);position:absolute;left:-19px;top:-2px;width:36px;height:36px;border-radius:50%;background:var(--purple);color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.3rem;display:grid;place-items:center}
+.timeline b{display:block;color:var(--plum);font-family:'Cormorant Garamond',serif;font-size:1.25rem}
+.timeline span{color:var(--muted);font-size:.94rem}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r);transition:border-color .2s,box-shadow .2s}
+.faq details[open]{border-color:var(--mauve);box-shadow:var(--shadow)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;min-height:60px;font-weight:600;color:var(--plum)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:30px;height:30px;border-radius:50%;background:var(--lilac);color:var(--purple);display:grid;place-items:center;transition:transform .3s,background .3s}
+.faq summary .pm svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--purple);color:#fff}
+.faq .ans{padding:0 24px 22px;color:var(--muted);font-size:.97rem}
+.faq .ans a{color:var(--purple);font-weight:600}
+
+/* ---------- Borboletas 3D (canvas Three.js) ---------- */
+#butterflies{position:fixed;inset:0;width:100%;height:100%;z-index:5;pointer-events:none}
+[data-speed]{will-change:translate}
+
+/* ---------- Controles de acessibilidade ---------- */
+.a11y-toggle{position:fixed;left:14px;bottom:16px;z-index:40;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--purple);background:#fff;color:var(--plum);font:600 .85rem/1 'Inter',sans-serif;display:flex;align-items:center;gap:8px;cursor:pointer;box-shadow:var(--shadow)}
+.a11y-toggle:hover{background:var(--lilac)}
+.a11y-toggle svg{width:18px;height:18px}
+.libras-note{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:.88rem;background:rgba(255,255,255,.12);padding:8px 14px;border-radius:999px}
+.libras-note svg{width:18px;height:18px}
+
+/* ---------- Movimento sutil (respeita preferências) ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- ============ BIBLIOTECA DE ÍCONES E FIGURAS (SVG inline) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 5c1.8 2 2.6 4.2 2.6 6.4S13.6 15.6 12 17c-1.6-1.4-2.6-3.4-2.6-5.6S10.200 7 12 5Z"/><path d="M12 17c-3.600 0-6.800-1.600-8.500-5 2.700-.3 5 .6 6.500 2.300M12 17c3.600 0 6.800-1.600 8.500-5-2.700-.3-5 .6-6.500 2.300M5 19.500h14"/></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24"><circle cx="14.500" cy="4.500" r="1.800"/><path d="M9 20l2.500-5-3-2.500 2-4.500 4 1.500 2.500 3M6 11l2.500-3.500"/></symbol>
+    <symbol id="i-heart-hand" viewBox="0 0 24 24"><path d="M12 14.500c-2.800-2-4.500-3.600-4.500-5.600A2.600 2.600 0 0 1 12 7.600a2.600 2.600 0 0 1 4.500 1.300c0 2-1.700 3.600-4.500 5.600Z"/><path d="M3 17.500l3-1.500c1.500-.7 3 0 4 .8l3 .9 5-1.400c1-.3 1.800.6 1.100 1.400l-3.600 3.400H8L3 20.500"/></symbol>
+    <symbol id="i-stones" viewBox="0 0 24 24"><ellipse cx="12" cy="18" rx="8" ry="2.800"/><ellipse cx="12" cy="12.500" rx="6" ry="2.400"/><ellipse cx="12" cy="7.500" rx="3.800" ry="2"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3.500 4.200 6 7 6 10.200A6 6 0 0 1 6 13.200C6 10 8.500 7.200 12 3Z"/><path d="M9.500 14a2.600 2.600 0 0 0 2.500 2.500"/></symbol>
+    <symbol id="i-foot" viewBox="0 0 24 24"><path d="M8 3c2.500-.5 4.500 1 4.800 3.600.3 2.400-.8 3.600-.6 5.600.2 2 1.600 3 1.500 5-.1 2-1.700 3.400-3.800 3.400S6 19 6 17c0-1.800.9-2.800.7-5C6.500 9.700 5.700 8.500 6 6c.2-1.400.9-2.600 2-3Z"/><circle cx="16" cy="5.500" r=".9"/><circle cx="18.200" cy="8" r=".9"/><circle cx="19" cy="11" r=".9"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M5 9h14c0 5-3 8-7 8s-7-3-7-8Z"/><path d="M12 17v3M8.500 20.500h7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><path d="M12 7.500V12l3 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.500 2.700 2.700L16 9.500"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.500-4.600-7.500-10A4.300 4.300 0 0 1 12 7.200 4.300 4.300 0 0 1 19.500 10c0 5.400-7.500 10-7.500 10Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.500-5.800-6.500-11a6.500 6.500 0 0 1 13 0c0 5.200-6.500 11-6.500 11Z"/><circle cx="12" cy="10" r="2.300"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.800 2.800 5.800 6.300.9-4.600 4.400 1.100 6.300L12 17.200 6.400 20.200l1.100-6.300L2.900 9.500l6.300-.9L12 2.800Z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.500" y="9" width="17" height="11" rx="2"/><path d="M3.500 13h17M12 9v11M12 9c-1.500-4-5-4-5-1.800C7 9 9 9 12 9Zm0 0c1.500-4 5-4 5-1.800C17 9 15 9 12 9Z"/></symbol>
+    <symbol id="i-ear" viewBox="0 0 24 24"><path d="M7 9a5 5 0 0 1 10 0c0 2.800-2 3.500-3 5-.8 1.300-.3 3.500-2.500 4.500-1.600.7-3-.2-3.500-1.500"/><path d="M10 9a2 2 0 0 1 4 0"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.500c0 4.500 3 8 7 9.500 4-1.500 7-5 7-9.500V6l-7-3Z"/><path d="m9 12 2.200 2.200L15.500 10"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.800"/><path d="M4.500 20c.8-3.800 3.800-5.500 7.500-5.500s6.700 1.700 7.500 5.500"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c.8 4.500 2.500 6.200 7 7-4.500.8-6.200 2.500-7 7-.8-4.500-2.500-6.200-7-7 4.500-.8 6.200-2.500 7-7ZM19 16c.3 1.600.9 2.200 2.500 2.500-1.600.3-2.200.9-2.500 2.500-.3-1.600-.9-2.200-2.500-2.500 1.600-.3 2.200-.9 2.500-2.500Z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.500 20.500 5 16A8.500 8.500 0 1 1 8 19l-4.500 1.500Z"/><path d="M9 8.500c0 3.500 3 6.500 6.500 6.500l1-1.500-2-1-1 .7c-1-.4-1.800-1.200-2.200-2.200l.7-1-1-2L9 8.500Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".8"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.500 11 12 4l8.500 7M6 9.500V20h12V9.500M10 20v-5h4v5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7.500 8 5.500 8-5.500"/></symbol>
+    <symbol id="i-chair" viewBox="0 0 24 24"><path d="M7 3.500h6.500v7H7zM7 10.500l-1 5h11l-1.500-5M6 15.500 5 21M17 15.500l1 5.500M13.500 5.500h3"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.500" r="3"/><circle cx="17" cy="9.500" r="2.300"/><path d="M3 19c.5-3.200 3-4.800 6-4.800s5.500 1.600 6 4.800M15.500 14.500c2.600-.2 4.700 1 5.500 4"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m21 3-9.500 18-2.200-7.800L3 11 21 3ZM9.300 13.200 21 3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.800"/><path d="m4 18 5-4.500 3.500 3L16 13l5 4.500"/></symbol>
+    <!-- Figuras decorativas -->
+    <symbol id="flower" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round"><path d="M50 14c9 10 13 20 13 29S57 58 50 64c-7-6-13-12-13-21s4-19 13-29Z" fill="currentColor" fill-opacity=".14"/><path d="M50 64C30 64 14 55 8 36c14-2 26 4 33 14M50 64c20 0 36-9 42-28-14-2-26 4-33 14"/><path d="M50 64c-14-1-24-8-28-20M50 64c14-1 24-8 28-20" opacity=".6"/><path d="M50 64v22M40 90h20" opacity=".7"/></g></symbol>
+    <symbol id="leaf" viewBox="0 0 100 160"><g fill="currentColor"><path d="M50 4C78 34 88 70 74 110c-6 16-14 28-24 46-10-18-18-30-24-46C12 70 22 34 50 4Z" fill-opacity=".22"/></g><path d="M50 14v138M50 52c-12 8-18 18-20 30M50 52c12 8 18 18 20 30M50 90c-9 6-13 13-15 22M50 90c9 6 13 13 15 22" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" opacity=".7"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<canvas id="butterflies" aria-hidden="true"></canvas>
+<svg id="morph" viewBox="-1.25 -1.25 2.5 2.5" aria-hidden="true">
+  <defs>
+    <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop id="mg1" offset="0" stop-color="#cdb9de"/><stop id="mg2" offset="1" stop-color="#ece3f2"/></linearGradient>
+  </defs>
+  <path id="morphPath" fill="url(#mg)" stroke="#9a7bb0" stroke-opacity=".45" stroke-width=".012"/>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio">Vanessa's Massoterapia</a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#empresas">Empresas</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#orcamento">Orçamento</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn primary sm" href="#orcamento">Pedir orçamento</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Massoterapia · Bem-estar · Relaxamento</div>
+      <h1>Cuidar de você também é uma forma de <em>amor</em></h1>
+      <p class="lead">Atendimento individual e acolhedor para aliviar dores, inchaço e a carga da vida corrida. No Clube AABB, em Campinas.</p>
+      <div class="btns">
+        <a class="btn primary" href="#orcamento"><svg class="ic"><use href="#i-send"/></svg>Pedir orçamento</a>
+        <a class="btn ghost" href="#servicos">Conhecer os serviços</a>
+      </div>
+      <ul class="chips">
+        <li><svg class="ic"><use href="#i-user"/></svg>Atendimento individual</li>
+        <li><svg class="ic"><use href="#i-clock"/></svg>Hora marcada</li>
+        <li><svg class="ic"><use href="#i-pin"/></svg>Clube AABB Campinas</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orb"></div><div class="orb2"></div>
+      <svg class="leaf-a" data-speed="-.18"><use href="#leaf"/></svg>
+      <svg class="leaf-b" data-speed=".22"><use href="#leaf"/></svg>
+      <svg class="flower" data-speed="-.08"><use href="#flower"/></svg>
+      <div class="float-card fc1" data-speed="-.3"><svg class="ic"><use href="#i-drop"/></svg>Drenagem linfática</div>
+      <div class="float-card fc2" data-speed=".28"><svg class="ic"><use href="#i-lotus"/></svg>Relaxamento</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVIÇOS ===================== -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="head center reveal" data-speed=".05">
+      <div class="eyebrow">Tipos de cuidados</div>
+      <h2>O cuidado certo para o que seu corpo pede</h2>
+      <p class="sub">Dor, cansaço, retenção de líquido ou só uma pausa. Cada atendimento é pensado para você.</p>
+    </div>
+    <div class="grid4">
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-lotus"/></svg></div><h3>Massagem Relaxante</h3><p>Alívio do estresse e da tensão acumulada, para desacelerar corpo e mente.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-heart-hand"/></svg></div><h3>Massagem Terapêutica</h3><p>Foco em dores musculares e desconfortos específicos, como lombar, ciático e fascite plantar.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-run"/></svg></div><h3>Massagem Desportiva</h3><p>Para quem treina: apoia a recuperação muscular e a mobilidade.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-stones"/></svg></div><h3>Pedras Quentes</h3><p>Calor profundo que potencializa o relaxamento da musculatura.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-drop"/></svg></div><h3>Drenagem Linfática</h3><p>Ajuda a reduzir o inchaço e a retenção de líquidos, com sensação de leveza.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-foot"/></svg></div><h3>Reflexologia Podal</h3><p>Estímulo dos pontos dos pés, com efeito de bem-estar no corpo todo.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-cup"/></svg></div><h3>Ventosaterapia</h3><p>Técnica complementar para aliviar tensões e estimular a circulação local.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-chair"/></svg></div><h3>Quick Massagem</h3><p>Sessão de 10 a 15 minutos na cadeira, vestido e sem óleo: cabeça, pescoço, ombros, costas e mãos.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-sparkle"/></svg></div><h3>Massagem de Liberação</h3><p>Trabalho direcionado para soltar pontos de tensão e devolver mobilidade.</p></article>
+      <article class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-home"/></svg></div><h3>Massagem para Acamados</h3><p>Cuidado e conforto para quem está de repouso, com a sensibilidade de quem tem formação em enfermagem.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EMPRESAS E EVENTOS ===================== -->
+<section id="empresas">
+  <div class="wrap">
+    <div class="head center reveal" data-speed=".05">
+      <div class="eyebrow">Para empresas e eventos</div>
+      <h2>Uma pausa de cuidado que cabe na rotina</h2>
+      <p class="sub">Quick Massage no próprio local: rápida, profissional e sem tirar ninguém da jornada por muito tempo.</p>
+    </div>
+    <div class="biz">
+      <div class="reveal">
+        <div class="facts">
+          <div class="fact"><svg class="ic"><use href="#i-clock"/></svg><strong>~15 min</strong><span>por sessão</span></div>
+          <div class="fact"><svg class="ic"><use href="#i-chair"/></svg><strong>Na cadeira</strong><span>vestido, sem óleo</span></div>
+          <div class="fact"><svg class="ic"><use href="#i-user"/></svg><strong>5 regiões</strong><span>cabeça, pescoço, ombros, costas e mãos</span></div>
+        </div>
+        <div class="formats">
+          <article class="card"><div class="icon-bubble"><svg class="ic"><use href="#i-sparkle"/></svg></div><h3>Ação corporativa</h3><p>Campanhas internas, datas comemorativas e semanas de bem-estar.</p></article>
+          <article class="card"><div class="icon-bubble"><svg class="ic"><use href="#i-people"/></svg></div><h3>Eventos</h3><p>Corporativos, feiras, congressos e eventos esportivos.</p></article>
+          <article class="card"><div class="icon-bubble"><svg class="ic"><use href="#i-clock"/></svg></div><h3>Programa recorrente</h3><p>Atendimento semanal, quinzenal ou mensal.</p></article>
+          <article class="card"><div class="icon-bubble"><svg class="ic"><use href="#i-heart-hand"/></svg></div><h3>Ação personalizada</h3><p>Montada conforme o número de participantes e a dinâmica do evento.</p></article>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.9rem">Como funciona a parceria</h3>
+        <ol class="timeline">
+          <li data-n="1"><b>Conversa inicial</b><span>Objetivo da ação, público, local, data e quantidade estimada de participantes.</span></li>
+          <li data-n="2"><b>Formato</b><span>Ação pontual, evento ou programa recorrente.</span></li>
+          <li data-n="3"><b>Organização</b><span>Espaço, horários e fluxo de participantes alinhados antes.</span></li>
+          <li data-n="4"><b>Atendimento</b><span>Sessões individuais no local, conforme o cronograma combinado.</span></li>
+        </ol>
+        <p class="sub" style="margin:6px 0 22px">O investimento é definido por participantes, duração, frequência, local e formato.</p>
+        <a class="btn primary" href="#orcamento" data-tipo="empresa"><svg class="ic"><use href="#i-send"/></svg>Orçamento para empresa ou evento</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<section class="alt" id="sobre">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="photo reveal" data-speed="-.06" role="img" aria-label="Espaço reservado para foto da Vanessa">
+        <div><svg class="ic"><use href="#i-image"/></svg>Coloque aqui uma foto profissional da Vanessa<br>(proporção vertical, 4:5)</div>
+      </div>
+      <div class="story reveal">
+        <div class="eyebrow">Sobre a Vanessa</div>
+        <h2>Cuidado de enfermeira, mãos de massoterapeuta</h2>
+        <p>Vanessa Alves é formada em Enfermagem pela Faculdade Anhanguera (Campinas III) e tem formação em Quick Massage pelo Senac, além de aperfeiçoamento em diversas modalidades de massagem.</p>
+        <p>Cada pessoa chega com uma rotina e uma dor, física e muitas vezes emocional. Por isso, o atendimento começa na escuta e segue com a técnica certa para cada necessidade.</p>
+        <p class="quote">Massagem não é luxo, é alívio de dor, da carga diária, da vida corrida e da autoestima.</p>
+        <p>Do atendimento individual no Clube AABB às ações de bem-estar em empresas e eventos, o objetivo é o mesmo: transformar o momento em pausa de cuidado.</p>
+      </div>
+    </div>
+
+    <div class="mvv">
+      <article class="card reveal">
+        <div class="icon-bubble"><svg class="ic"><use href="#i-heart"/></svg></div>
+        <h3>Missão</h3>
+        <p>Proporcionar bem-estar e produtividade a colaboradores e participantes, por meio de técnicas de massagem terapêutica de alta qualidade.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-bubble"><svg class="ic"><use href="#i-sparkle"/></svg></div>
+        <h3>Visão</h3>
+        <p>Ser reconhecida como referência em massagem terapêutica no ambiente corporativo e em eventos, pela excelência e pela inovação.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-bubble"><svg class="ic"><use href="#i-shield"/></svg></div>
+        <h3>Valores</h3>
+        <ul class="values">
+          <li><svg class="ic"><use href="#i-check"/></svg>Excelência e profissionalismo</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Empatia</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Inovação</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Saúde e comprometimento com a satisfação dos clientes</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIFERENCIAIS ===================== -->
+<section id="diferenciais">
+  <div class="wrap">
+    <div class="head center reveal" data-speed=".05">
+      <div class="eyebrow">Por que escolher</div>
+      <h2>O que torna o atendimento diferente</h2>
+      <p class="sub">Não é só técnica. É o jeito de cuidar.</p>
+    </div>
+    <div class="diff">
+      <article class="reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-ear"/></svg></div><div><h3>Escuta de verdade</h3><p>Antes de começar, a Vanessa entende o que você sente e o que precisa.</p></div></article>
+      <article class="reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-user"/></svg></div><div><h3>Atendimento 100% individual</h3><p>Seu horário é só seu, com atenção total durante toda a sessão.</p></div></article>
+      <article class="reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-heart-hand"/></svg></div><div><h3>Dor tratada como um todo</h3><p>Olhar para o corpo e também para o emocional, não apenas para o sintoma.</p></div></article>
+      <article class="reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-sparkle"/></svg></div><div><h3>Variedade de técnicas</h3><p>Relaxante, terapêutica, drenagem, pedras quentes, reflexologia e mais, num só lugar.</p></div></article>
+      <article class="reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-shield"/></svg></div><div><h3>Formação em enfermagem</h3><p>Base de saúde somada à formação em Quick Massage pelo Senac: mais segurança e cuidado.</p></div></article>
+      <article class="reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-people"/></svg></div><div><h3>Vai até a sua empresa ou evento</h3><p>Atendimento no local, com estrutura compacta e organização prévia.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMO FUNCIONA ===================== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="head center reveal" data-speed=".05">
+      <div class="eyebrow">Passo a passo</div>
+      <h2>Agendar é simples</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Peça seu orçamento</h3><p>Preencha o formulário abaixo. Leva menos de um minuto.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Converse no WhatsApp</h3><p>A Vanessa responde, tira dúvidas e indica o melhor cuidado para você.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Relaxe e sinta a diferença</h3><p>Dia e hora combinados, no Clube AABB, para o seu momento de bem-estar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVALIAÇÕES ===================== -->
+<section id="avaliacoes">
+  <div class="wrap">
+    <div class="head center reveal" data-speed=".05">
+      <div class="eyebrow">Avaliações</div>
+      <h2>Quem já sentiu, recomenda</h2>
+      <p class="sub">Depoimentos de clientes da Vanessa.</p>
+    </div>
+    <div class="reviews" id="reviews"></div>
+  </div>
+</section>
+
+<!-- ===================== VALE PRESENTE ===================== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="gift reveal">
+      <svg class="flower" aria-hidden="true" data-speed=".12"><use href="#flower"/></svg>
+      <svg class="ic gift-ic"><use href="#i-gift"/></svg>
+      <h2>Vale Presente Massagem</h2>
+      <p>O presente que cuida de quem você ama. Para aniversário, Dia das Mães, Natal ou só para surpreender.</p>
+      <a class="btn light" id="giftBtn" href="#" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Quero presentear</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="head center reveal" data-speed=".05">
+      <div class="eyebrow">Dúvidas frequentes</div>
+      <h2>Perguntas e respostas</h2>
+      <p class="sub">Não achou o que procurava? Chame a Vanessa no WhatsApp.</p>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>O que é a Quick Massage?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Técnica de origem japonesa feita em cadeira anatômica, com pressão dos dedos, polegares, palmas e cotovelos. A sessão é curta, de 10 a 15 minutos, e trabalha cabeça, pescoço, ombros, costas e mãos.</div></details>
+      <details class="reveal"><summary>Preciso tirar a roupa? Usa óleo?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Na Quick Massage, não: você permanece vestido e não há aplicação de óleo. Nas demais massagens, a Vanessa explica o procedimento antes de começar.</div></details>
+      <details class="reveal"><summary>Quais massagens a Vanessa realiza?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Relaxante, terapêutica, desportiva, com pedras quentes, drenagem linfática, reflexologia podal, ventosaterapia, quick massagem, liberação e massagem para acamados.</div></details>
+      <details class="reveal"><summary>Onde acontece o atendimento individual?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">No Clube AABB, em Campinas, com hora marcada. Veja o endereço na seção de contato.</div></details>
+      <details class="reveal"><summary>A Vanessa atende empresas e eventos?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Sim. A Quick Massage é feita no próprio local da empresa ou do evento, em ações pontuais, programas recorrentes (semanal, quinzenal ou mensal), feiras, congressos e eventos esportivos.</div></details>
+      <details class="reveal"><summary>Como é calculado o orçamento para empresas?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Depende do número de participantes, duração, frequência, local e formato (ação pontual, meia diária ou diária, pacote recorrente ou evento personalizado). Peça um orçamento e receba uma proposta sob medida.</div></details>
+      <details class="reveal"><summary>Qual a formação da Vanessa?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Enfermagem pela Faculdade Anhanguera (Campinas III), Quick Massage pelo Senac e aperfeiçoamento em outras modalidades de massagem.</div></details>
+      <details class="reveal"><summary>Como agendo ou peço valores?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Preencha o formulário de orçamento: sua mensagem vai pronta para o WhatsApp da Vanessa, que responde com orientação e valores. Também dá para chamar direto no botão de WhatsApp.</div></details>
+      <details class="reveal"><summary>Posso presentear alguém?<span class="pm"><svg viewBox="0 0 16 16"><path d="M8 2v12M2 8h12"/></svg></span></summary><div class="ans">Sim, existe o Vale Presente Massagem, para aniversário, Dia das Mães, Natal ou qualquer data. Chame no WhatsApp para combinar.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ORÇAMENTO ===================== -->
+<section class="alt" id="orcamento">
+  <div class="wrap quote-grid">
+    <div class="reveal">
+      <div class="eyebrow">Orçamento</div>
+      <h2>Peça seu orçamento sem compromisso</h2>
+      <p class="sub">Conte o que você precisa. Sua mensagem vai pronta para o WhatsApp da Vanessa.</p>
+      <ul class="checks">
+        <li><svg class="ic"><use href="#i-check"/></svg>Resposta direta com a Vanessa</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Ela responde com orientação e valores</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Sem cadastro e sem compromisso</li>
+      </ul>
+    </div>
+    <form id="quoteForm" class="reveal" novalidate>
+      <label>Quero atendimento
+        <select name="tipo">
+          <option value="pessoa">Para mim (individual, Clube AABB)</option>
+          <option value="empresa">Para minha empresa ou evento</option>
+        </select>
+      </label>
+      <div class="row2">
+        <label>Seu nome
+          <input name="nome" type="text" autocomplete="name" placeholder="Como posso te chamar?" required>
+        </label>
+        <label>Serviço de interesse
+          <select name="servico" required>
+            <option value="">Selecione</option>
+            <option>Massagem Relaxante</option>
+            <option>Massagem Terapêutica</option>
+            <option>Massagem Desportiva</option>
+            <option>Massagem com Pedras Quentes</option>
+            <option>Drenagem Linfática</option>
+            <option>Reflexologia Podal</option>
+            <option>Ventosaterapia</option>
+            <option>Quick Massagem</option>
+            <option>Massagem de Liberação</option>
+            <option>Massagem para Acamados</option>
+            <option>Quick Massage para empresa/evento</option>
+            <option>Vale Presente</option>
+            <option>Ainda não sei, preciso de orientação</option>
+          </select>
+        </label>
+      </div>
+      <div class="row2">
+        <label>Melhor período
+          <select name="periodo">
+            <option>Manhã</option><option>Tarde</option><option>Noite</option><option>Sem preferência</option>
+          </select>
+        </label>
+        <label>Dia preferido <span class="note">(opcional)</span>
+          <input name="dia" type="text" placeholder="Ex.: sábado, ou 05/12">
+        </label>
+      </div>
+      <label>Conte um pouco <span class="note">(opcional)</span>
+        <textarea name="msg" placeholder="Ex.: dor na lombar, inchaço nas pernas, quero relaxar..."></textarea>
+      </label>
+      <button class="btn primary" type="submit"><svg class="ic"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</button>
+      <p class="note" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== CONTATO / ENDEREÇO ===================== -->
+<section id="contato">
+  <div class="wrap">
+    <div class="head center reveal" data-speed=".05">
+      <div class="eyebrow">Onde estou</div>
+      <h2>Venha viver esse momento</h2>
+    </div>
+    <div class="info">
+      <div class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-pin"/></svg></div><div><h3>Endereço</h3><p>Clube AABB · Campinas, SP<br><span id="addr">[Adicione rua, número e bairro]</span></p></div></div>
+      <div class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-wa"/></svg></div><div><h3>WhatsApp · Clube AABB</h3><a id="waLink" href="#" target="_blank" rel="noopener">(19) 92000-5690</a></div></div>
+      <div class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-people"/></svg></div><div><h3>Empresas e eventos</h3><a id="waCorp" href="#" target="_blank" rel="noopener">(19) 99497-9577</a></div></div>
+      <div class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-mail"/></svg></div><div><h3>E-mail</h3><a href="mailto:vanessaaquick@gmail.com">vanessaaquick@gmail.com</a></div></div>
+      <div class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-clock"/></svg></div><div><h3>Atendimento</h3><p>Com hora marcada.<br><span>[Adicione dias e horários]</span></p></div></div>
+      <div class="card reveal"><div class="icon-bubble"><svg class="ic"><use href="#i-ig"/></svg></div><div><h3>Instagram</h3><a href="https://www.instagram.com/vanessasmassoterapia/" target="_blank" rel="noopener">@vanessasmassoterapia</a></div></div>
+    </div>
+    <div class="center map-btn">
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=AABB+Campinas+SP" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg>Ver no mapa</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Vanessa's Massoterapia</a>
+    <p>Massoterapia · Bem-estar · Relaxamento · Campinas, SP</p>
+    <p class="libras-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 13V6.500a1.500 1.500 0 0 1 3 0V11M11 10V5a1.500 1.500 0 0 1 3 0v6M14 9V6.500a1.500 1.500 0 0 1 3 0V14c0 4-2.500 6-5.500 6S7 18 6 15.500l-1.500-3a1.400 1.400 0 0 1 2.400-1.400L8 13"/></svg>Site com tradução em Libras (VLibras): clique no ícone de mãos e selecione o texto.</p>
+    <p style="margin-top:10px">© <span id="y"></span> Vanessa's Massoterapia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<button class="a11y-toggle" id="motionBtn" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4v16M18 4v16"/></svg><span>Pausar animações</span></button>
+<a class="float" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp</a>
+
+<!-- VLibras: tradutor de Português para Libras (Governo Federal) -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+<script>
+  window.addEventListener('load', () => { try { new window.VLibras.Widget('https://vlibras.gov.br/app'); } catch (e) {} });
+</script>
+
+<script>
+/* ===================== CONFIGURAÇÃO (edite aqui) ===================== */
+const WHATS = "5519920005690";        // atendimento individual (Clube AABB)
+const WHATS_CORP = "5519994979577";   // empresas e eventos
+
+/* AVALIAÇÕES: substitua pelos depoimentos REAIS (com autorização das clientes).
+   Enquanto "placeholder: true", o cartão aparece marcado como exemplo. */
+const REVIEWS = [
+  { placeholder:true, nome:"Nome da cliente", detalhe:"Serviço realizado", texto:"Cole aqui o depoimento real de uma cliente.", nota:5 },
+  { placeholder:true, nome:"Nome da cliente", detalhe:"Serviço realizado", texto:"Cole aqui o depoimento real de uma cliente.", nota:5 },
+  { placeholder:true, nome:"Nome da cliente", detalhe:"Serviço realizado", texto:"Cole aqui o depoimento real de uma cliente.", nota:5 }
+];
+/* ====================================================================== */
+
+const wa = (t, n = WHATS) => `https://wa.me/${n}?text=${encodeURIComponent(t)}`;
+const hi = "Olá, Vanessa! Vim pelo site e gostaria de agendar um atendimento.";
+document.getElementById('waLink').href = wa(hi);
+document.getElementById('floatWa').href = wa(hi);
+document.getElementById('waCorp').href = wa('Olá, Vanessa! Vim pelo site e quero um orçamento de Quick Massage para minha empresa/evento.', WHATS_CORP);
+document.getElementById('giftBtn').href = wa("Olá, Vanessa! Quero saber mais sobre o Vale Presente Massagem.");
+document.getElementById('y').textContent = new Date().getFullYear();
+
+/* Avaliações */
+const box = document.getElementById('reviews');
+const star = '<svg class="ic"><use href="#i-star"/></svg>';
+REVIEWS.forEach(r => {
+  const el = document.createElement('article');
+  el.className = 'review reveal' + (r.placeholder ? ' placeholder' : '');
+  const ini = (r.nome || '?').trim().charAt(0).toUpperCase();
+  el.innerHTML = `<div class="qmark" aria-hidden="true">“</div>
+    <div class="stars" aria-label="Nota ${r.nota} de 5">${star.repeat(r.nota)}</div>
+    ${r.placeholder ? '<span class="draft">Exemplo · substitua por depoimento real</span>' : ''}
+    <blockquote></blockquote>
+    <div class="who"><div class="avatar">${ini}</div><div><strong></strong><small></small></div></div>`;
+  el.querySelector('blockquote').textContent = r.texto;
+  el.querySelector('strong').textContent = r.nome;
+  el.querySelector('small').textContent = r.detalhe;
+  box.appendChild(el);
+});
+
+/* Formulário → WhatsApp */
+document.getElementById('quoteForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target, msg = document.getElementById('formMsg');
+  if (!f.nome.value.trim() || !f.servico.value) { msg.textContent = 'Preencha seu nome e o serviço de interesse.'; return; }
+  let t = `Olá, Vanessa! Meu nome é ${f.nome.value.trim()}. Gostaria de um orçamento para: ${f.servico.value}.\nMelhor período: ${f.periodo.value}.`;
+  if (f.dia.value.trim()) t += `\nDia preferido: ${f.dia.value.trim()}.`;
+  if (f.msg.value.trim()) t += `\nObservações: ${f.msg.value.trim()}`;
+  const corp = f.tipo.value === 'empresa';
+  if (corp) t = t.replace('Gostaria de um orçamento', 'Gostaria de um orçamento (empresa/evento)');
+  msg.textContent = 'Abrindo o WhatsApp...';
+  window.open(wa(t, corp ? WHATS_CORP : WHATS), '_blank', 'noopener');
+});
+
+/* Botões que pré-selecionam o tipo no formulário */
+document.querySelectorAll('[data-tipo]').forEach(a => a.addEventListener('click', () => {
+  document.querySelector('#quoteForm [name=tipo]').value = a.dataset.tipo;
+}));
+
+/* ===================== MORPH DE FORMAS AO ROLAR ===================== */
+(() => {
+  const N = 96, TAU = Math.PI * 2;
+  const norm = pts => { const m = Math.max(...pts.map(p => Math.max(Math.abs(p[0]), Math.abs(p[1])))); return pts.map(p => [p[0]/m, p[1]/m]); };
+  const gen = fn => norm(Array.from({length:N}, (_, i) => fn(i / N * TAU)));
+  const SHAPES = {
+    flor:   gen(t => { const r = .62 + .3 * Math.cos(5 * t); return [r * Math.sin(t), -r * Math.cos(t)]; }),
+    gota:   gen(t => [Math.sin(t) * Math.sin(t / 2) * 1.0, -Math.cos(t)]),
+    coracao:gen(t => [16 * Math.pow(Math.sin(t), 3), -(13*Math.cos(t) - 5*Math.cos(2*t) - 2*Math.cos(3*t) - Math.cos(4*t))]),
+    pedra:  gen(t => [Math.sin(t) * 1.0, -Math.cos(t) * .72]),
+    estrela:gen(t => { const r = .55 + .4 * Math.pow(Math.abs(Math.cos(2 * t)), 1.5); return [r * Math.sin(t), -r * Math.cos(t)]; })
+  };
+  /* uma forma por seção, na ordem da página */
+  const MAP = [['inicio','flor'], ['servicos','gota'], ['empresas','pedra'], ['sobre','coracao'], ['diferenciais','estrela'],
+               ['avaliacoes','flor'], ['faq','gota'], ['orcamento','coracao'], ['contato','flor']];
+  const secs = MAP.map(([id, sh]) => ({ el: document.getElementById(id), shape: SHAPES[sh] })).filter(x => x.el);
+  const path = document.getElementById('morphPath'), svg = document.getElementById('morph');
+  const g1 = document.getElementById('mg1'), g2 = document.getElementById('mg2');
+  const COLORS = [['#cdb9de','#ece3f2'], ['#c5d3bd','#ece3f2'], ['#b9a2d0','#e3d7ee'], ['#e0bfd0','#f3e6ee'], ['#cdb9de','#dce6d6']];
+
+  const toPath = P => {
+    const n = P.length; let d = `M${P[0][0].toFixed(3)},${P[0][1].toFixed(3)}`;
+    for (let i = 0; i < n; i++) {
+      const p0 = P[(i-1+n)%n], p1 = P[i], p2 = P[(i+1)%n], p3 = P[(i+2)%n];
+      d += `C${(p1[0]+(p2[0]-p0[0])/6).toFixed(3)},${(p1[1]+(p2[1]-p0[1])/6).toFixed(3)} ${(p2[0]-(p3[0]-p1[0])/6).toFixed(3)},${(p2[1]-(p3[1]-p1[1])/6).toFixed(3)} ${p2[0].toFixed(3)},${p2[1].toFixed(3)}`;
+    }
+    return d + 'Z';
+  };
+  const mix = (A, B, k) => A.map((p, i) => [p[0] + (B[i][0]-p[0])*k, p[1] + (B[i][1]-p[1])*k]);
+  const ease = x => x*x*(3-2*x);
+  const hex = h => [1,3,5].map(i => parseInt(h.substr(i,2),16));
+  const mixHex = (a, b, k) => '#' + hex(a).map((v,i) => Math.round(v + (hex(b)[i]-v)*k).toString(16).padStart(2,'0')).join('');
+
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const y = scrollY + innerHeight * .5;
+    let i = 0;
+    for (let k = 0; k < secs.length; k++) if (secs[k].el.offsetTop <= y) i = k;
+    const a = secs[i], b = secs[Math.min(i + 1, secs.length - 1)];
+    const top = a.el.offsetTop, h = a.el.offsetHeight || 1;
+    const f = Math.min(1, Math.max(0, (y - top) / h));
+    const k = i === secs.length - 1 ? 0 : ease(Math.min(1, Math.max(0, (f - .45) / .55)));
+    path.setAttribute('d', toPath(mix(a.shape, b.shape, k)));
+    const c1 = COLORS[i % COLORS.length], c2 = COLORS[(i + 1) % COLORS.length];
+    g1.setAttribute('stop-color', mixHex(c1[0], c2[0], k));
+    g2.setAttribute('stop-color', mixHex(c1[1], c2[1], k));
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const p = max > 0 ? scrollY / max : 0;
+    svg.style.transform = `rotate(${p * 200}deg) scale(${1 + Math.sin(p * Math.PI) * .12})`;
+    document.getElementById('progress').style.transform = `scaleX(${p})`;
+  };
+  path.setAttribute('d', toPath(SHAPES.flor));
+  if (!reduce) {
+    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    addEventListener('resize', update);
+    update();
+  }
+})();
+
+/* ===================== PARALLAX DE CAMADAS ===================== */
+const prefersReduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+window.__motion = !prefersReduce;           // lido pelas borboletas
+const layers = [...document.querySelectorAll('[data-speed]')];
+let pTick = false;
+function parallax() {
+  pTick = false;
+  const mid = innerHeight / 2;
+  layers.forEach(el => {
+    if (!window.__motion) { el.style.translate = ''; return; }
+    const r = el.getBoundingClientRect();
+    if (r.bottom < -200 || r.top > innerHeight + 200) return;
+    const d = (r.top + r.height / 2) - mid;           // distância ao centro da tela
+    el.style.translate = `0 ${(-d * parseFloat(el.dataset.speed)).toFixed(1)}px`;
+  });
+}
+addEventListener('scroll', () => { if (!pTick) { pTick = true; requestAnimationFrame(parallax); } }, { passive: true });
+addEventListener('resize', parallax);
+parallax();
+
+/* Botão pausar/retomar animações */
+const mBtn = document.getElementById('motionBtn');
+function setMotion(on) {
+  window.__motion = on;
+  mBtn.setAttribute('aria-pressed', String(!on));
+  mBtn.querySelector('span').textContent = on ? 'Pausar animações' : 'Retomar animações';
+  document.documentElement.style.scrollBehavior = on ? '' : 'auto';
+  parallax();
+}
+mBtn.addEventListener('click', () => setMotion(!window.__motion));
+if (prefersReduce) setMotion(false);
+
+/* Revelar ao rolar */
+const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<!-- ===================== BORBOLETAS 3D (Three.js) ===================== -->
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+const canvas = document.getElementById('butterflies');
+const isMobile = matchMedia('(max-width: 700px)').matches;
+let renderer;
+try { renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !isMobile, powerPreference: 'low-power' }); }
+catch (e) { canvas.remove(); throw e; }          // sem WebGL: o site segue normal
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setClearColor(0x000000, 0);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, 1, .1, 100);
+camera.position.z = 10;
+scene.add(new THREE.AmbientLight(0xffffff, 1.15));
+const sun = new THREE.DirectionalLight(0xffffff, .9); sun.position.set(2, 4, 6); scene.add(sun);
+
+/* ---------- Asa: silhueta única usada na geometria e na textura ---------- */
+const YMIN = -.8, YMAX = 1.1;
+function wingPath(ctxOrShape, mapX = x => x, mapY = y => y) {
+  const P = ctxOrShape, X = mapX, Y = mapY;
+  P.moveTo(X(0), Y(.1));
+  P.bezierCurveTo(X(.1), Y(.8), X(.55), Y(1.05), X(.95), Y(.85));
+  P.bezierCurveTo(X(1.05), Y(.6), X(.9), Y(.3), X(.55), Y(.15));
+  P.bezierCurveTo(X(.95), Y(.1), X(1.0), Y(-.45), X(.65), Y(-.6));
+  P.bezierCurveTo(X(.4), Y(-.75), X(.12), Y(-.45), X(0), Y(-.1));
+}
+const shape = new THREE.Shape(); wingPath(shape); shape.closePath();
+const wingGeo = new THREE.ShapeGeometry(shape, 28);
+{ // UV = posição normalizada
+  const pos = wingGeo.attributes.position, uv = wingGeo.attributes.uv;
+  for (let i = 0; i < pos.count; i++) {
+    uv.setXY(i, pos.getX(i), (pos.getY(i) - YMIN) / (YMAX - YMIN));
+    pos.setZ(i, Math.pow(pos.getX(i), 2) * .22);       // leve curvatura da asa
+  }
+  wingGeo.computeVertexNormals();
+}
+
+function wingTexture([c1, c2, c3, edge]) {
+  const W = 512, H = 512, c = document.createElement('canvas'); c.width = W; c.height = H;
+  const g = c.getContext('2d');
+  const mx = x => x * W, my = y => (1 - (y - YMIN) / (YMAX - YMIN)) * H;
+  g.beginPath(); wingPath(g, mx, my); g.closePath();
+  const grad = g.createRadialGradient(0, my(.1), 10, 0, my(.1), W * 1.05);
+  grad.addColorStop(0, c1); grad.addColorStop(.55, c2); grad.addColorStop(1, c3);
+  g.fillStyle = grad; g.fill();
+  g.save(); g.clip();
+  // nervuras
+  g.strokeStyle = 'rgba(60,35,80,.35)'; g.lineWidth = 2.2;
+  for (let i = 0; i < 9; i++) {
+    const a = -1.1 + i * .27;
+    g.beginPath(); g.moveTo(0, my(.05));
+    g.quadraticCurveTo(mx(.5), my(.05 + Math.sin(a) * .35), mx(1.05), my(.05 + Math.sin(a) * .95));
+    g.stroke();
+  }
+  // manchas claras na borda
+  g.fillStyle = 'rgba(255,255,255,.8)';
+  [[.93,.8,16],[.78,.93,13],[.55,.98,11],[.96,.62,12],[.82,-.2,14],[.62,-.5,12],[.9,.05,10]].forEach(([x,y,r]) => { g.beginPath(); g.arc(mx(x), my(y), r, 0, 7); g.fill(); });
+  // mancha central
+  g.fillStyle = 'rgba(255,255,255,.28)'; g.beginPath(); g.ellipse(mx(.45), my(.5), 60, 36, -.5, 0, 7); g.fill();
+  g.restore();
+  g.lineWidth = 9; g.strokeStyle = edge; g.lineJoin = 'round'; g.beginPath(); wingPath(g, mx, my); g.closePath(); g.stroke();
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
+}
+
+const PALETTES = [
+  ['#f6e7ff', '#a98bd0', '#6c4f82', '#3a2850'],   // lilás (cor da marca)
+  ['#fff1f6', '#e7a9c8', '#b0689a', '#4b3660'],   // rosa
+  ['#f3ffe9', '#a9c99a', '#5f8a55', '#2f4a30'],   // verde-folha
+  ['#fff9e2', '#e6c36a', '#b8913f', '#4a3a1a'],   // dourado
+];
+const textures = PALETTES.map(wingTexture);
+
+const bodyMat = new THREE.MeshLambertMaterial({ color: 0x3a2850 });
+const bodyGeo = new THREE.CapsuleGeometry(.035, .42, 4, 10);
+const headGeo = new THREE.SphereGeometry(.05, 10, 10);
+const antGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0), new THREE.Vector3(.05,.16,0), new THREE.Vector3(.12,.26,0)]);
+const antMat = new THREE.LineBasicMaterial({ color: 0x3a2850 });
+
+function makeButterfly(i) {
+  const root = new THREE.Group(), tilt = new THREE.Group(); root.add(tilt);
+  const wMat = new THREE.MeshLambertMaterial({ map: textures[i % textures.length], transparent: true, alphaTest: .08, side: THREE.DoubleSide });
+  const right = new THREE.Group(), left = new THREE.Group();
+  const wr = new THREE.Mesh(wingGeo, wMat); right.add(wr);
+  const wl = new THREE.Mesh(wingGeo, wMat); wl.scale.x = -1; left.add(wl);
+  right.position.y = left.position.y = .05;
+  const body = new THREE.Mesh(bodyGeo, bodyMat);
+  const head = new THREE.Mesh(headGeo, bodyMat); head.position.y = .27;
+  const a1 = new THREE.Line(antGeo, antMat); a1.position.y = .3;
+  const a2 = a1.clone(); a2.scale.x = -1;
+  tilt.add(right, left, body, head, a1, a2);
+  tilt.rotation.x = -.55;                       // vista 3/4: dá volume
+  scene.add(root);
+  return { root, tilt, right, left };
+}
+
+/* ---------- Bando: camadas de profundidade (parallax) ---------- */
+const COUNT = isMobile ? 4 : 7;
+const flock = Array.from({ length: COUNT }, (_, i) => {
+  const depth = [ 2.5, -1, 1, -3, 3.2, -2, .2 ][i % 7];           // z: perto = grande e rápido
+  return {
+    ...makeButterfly(i), depth,
+    size: (isMobile ? .8 : 1) * (.3 + (depth + 3) * .065),
+    fx: .7 + (i % 3) * .35, fy: .9 + (i % 4) * .3, ph: i * 1.7,   // trajetórias distintas
+    flap: 9 + (i % 4) * 1.4, pos: new THREE.Vector3(), prev: new THREE.Vector3(), heading: 0, boost: 0,
+  };
+});
+
+function resize() {
+  const w = innerWidth, h = innerHeight;
+  renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize); resize();
+
+let mx = 0, my = 0;
+addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+
+let lastY = scrollY, vel = 0, t0 = performance.now(), running = true;
+document.addEventListener('visibilitychange', () => { running = !document.hidden; if (running) { t0 = performance.now(); loop(); } });
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+function loop() {
+  if (!running) return;
+  requestAnimationFrame(loop);
+  const now = performance.now(), dt = Math.min(.05, (now - t0) / 1000); t0 = now;
+  const on = window.__motion !== false;
+  const time = now / 1000;
+
+  // velocidade de rolagem suavizada (px/s) → energia das asas
+  const dy = scrollY - lastY; lastY = scrollY;
+  vel += ((on ? dy / Math.max(dt, .001) : 0) - vel) * Math.min(1, dt * 5);
+  const energy = clamp(Math.abs(vel) / 1400, 0, 1.6);
+
+  const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  const p = scrollY / max;                       // 0..1 progresso da página
+
+  camera.position.x += ((on ? mx * 1.2 : 0) - camera.position.x) * .04;   // parallax do mouse
+  camera.position.y += ((on ? -my * .8 : 0) - camera.position.y) * .04;
+  camera.lookAt(0, 0, 0);
+
+  flock.forEach((b, i) => {
+    const dist = camera.position.z - b.depth;
+    const hh = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * dist, hw = hh * camera.aspect;
+    // trajetória guiada pela rolagem + vagar suave no tempo
+    const sx = Math.sin(p * Math.PI * 2 * b.fx + b.ph) * .78 + Math.sin(time * .5 + b.ph) * .08;
+    const sy = Math.sin(p * Math.PI * 2 * b.fy + b.ph * 1.3) * .62 + Math.cos(time * .7 + b.ph) * .07;
+    const tx = sx * hw, ty = sy * hh;
+    // acompanha o sentido da rolagem: quem está perto sobe/desce mais (paralaxe)
+    const drift = on ? clamp(vel / 2500, -1, 1) * (b.depth + 4) * .06 : 0;
+    b.pos.x += (tx - b.pos.x) * Math.min(1, dt * 2.2);
+    b.pos.y += (ty + drift - b.pos.y) * Math.min(1, dt * 2.2);
+    b.pos.z = b.depth + Math.sin(time * .6 + b.ph) * .3;
+
+    // direção do voo
+    const vx = b.pos.x - b.prev.x, vy = b.pos.y - b.prev.y; b.prev.copy(b.pos);
+    if (on && Math.hypot(vx, vy) > .0008) {
+      const target = Math.atan2(-vx, vy) * .5;   // 50%: mantém as borboletas "em pé"
+      let d = target - b.heading; d = Math.atan2(Math.sin(d), Math.cos(d)); b.heading += d * Math.min(1, dt * 4);
+    } else b.heading *= .96;
+
+    b.root.position.copy(b.pos);
+    b.root.rotation.z = b.heading;
+    b.root.scale.setScalar(b.size);
+
+    // batida de asas: mais forte quanto mais se rola
+    const f = on ? b.flap * (1 + energy * .9) : 0;
+    b.boost += ((on ? 1 : 0) - b.boost) * Math.min(1, dt * 3);
+    const wave = on ? Math.sin(time * f + b.ph) : .55;
+    const ang = (.25 + (.5 + energy * .25) * (wave * .5 + .5)) * 1.25;   // 0.3 → ~1.4 rad
+    b.right.rotation.y = -ang; b.left.rotation.y = ang;
+    b.tilt.position.y = on ? Math.sin(time * f + b.ph) * .03 : 0;
+    b.tilt.rotation.x = -.55 + (on ? Math.sin(time * 1.3 + b.ph) * .08 : 0);
+  });
+
+  renderer.render(scene, camera);
+}
+loop();
+</script>
+</body>
+</html>
